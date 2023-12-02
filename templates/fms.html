@@ -1,0 +1,74 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/fms">FMS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron text-center mt-4">
+  <h1>FMS</h1>
+  <p>Feedback Management System</p>
+</div>
+
+
+<div class="container mb-3">
+  <div class="row mt-5 text-center">
+    <div class="col-sm-3">
+      <!-- <h4>Jayant</h4>
+      <p>20BCS6494</p> -->
+    </div>
+   
+   <div class="col-sm-3">
+   <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <img src="static/studentLogin-icon.png">
+  </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">Student Login</h5>
+    <p class="card-text">Login with your UID and Password to access.</p>
+    <a href="/fms/student/login" class="btn btn-primary">Login</a>
+  </div>
+</div>
+</div>
+   
+   
+   <div class="col-sm-3">
+   <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <img src="static/staffLogin-icon.png" >
+  </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">Staff Login</h5>
+    <p class="card-text">Login using your Employee Code and Password.</p>
+    <a href="/fms/staff/login" class="btn btn-primary">Login</a>
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='code.js')}}"></script>
+  </body>
+</html>

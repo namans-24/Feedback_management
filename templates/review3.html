@@ -1,0 +1,106 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FMS</title>
+    <link rel="stylesheet" href="/static/style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+     <!-- <h3> Write a review for {{data[1]}} for subject {{data[0]}}</h3> -->
+    <div class="container">
+     
+      <div class="text">Write a review for Prof. {{data[1]}} for subject {{data[0]}}</div>
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="/fms/student/review/0" method = "post" enctype="multipart/form-data">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Describe your experience.." required name="review"></textarea>
+            <input type="text" name="rating" id="rating">
+            <input type="text" name="teacherName" id = "teacherName">
+          </div>
+          <div class="btn">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      // const btn = document.querySelector("button");
+      // const post = document.querySelector(".post");
+      // const widget = document.querySelector(".star-widget");
+      // const editBtn = document.querySelector(".edit");
+      // btn.onclick = ()=>{
+      //   widget.style.display = "none";
+      //   post.style.display = "block";
+      //   editBtn.onclick = ()=>{
+      //     widget.style.display = "block";
+      //     post.style.display = "none";
+      //   }
+      //   return false;
+      // }
+      
+      let lastValue = 0;
+      let ratingInput = document.getElementById("rating");
+      let rad = document.getElementById("rate-5");
+      rad.onclick = ()=>{
+        lastValue = 5;
+        ratingInput.value = lastValue;
+        console.log("clicked");
+      }
+      
+      rad = document.getElementById("rate-4");
+      rad.onclick = ()=>{
+        lastValue = 4;
+        ratingInput.value = lastValue;
+        console.log("clicked");
+      }
+      
+      rad = document.getElementById("rate-3");
+      rad.onclick = ()=>{
+        lastValue = 3;
+        ratingInput.value = lastValue;
+        console.log("clicked");
+      }
+      
+      rad = document.getElementById("rate-2");
+      rad.onclick = ()=>{
+        lastValue = 2;
+        ratingInput.value = lastValue;
+        console.log("clicked");
+      }
+      
+      rad = document.getElementById("rate-1");
+      rad.onclick = ()=>{
+        lastValue = 1;
+        ratingInput.value = lastValue;
+        console.log("clicked");
+      }
+      
+      
+      let a = document.getElementById("rating");
+      a.style.display = 'none';
+      a = document.getElementById("teacherName");
+      a.style.display = 'none';
+      a.value = "{{data[1]}}";
+    </script>
+
+  </body>
+</html>
